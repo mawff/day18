@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace day18
 {
-    internal class Hotel
+    public class Hotel
     {
         public int count { get; set; }
       public int id { get; set; }
