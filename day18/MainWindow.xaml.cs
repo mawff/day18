@@ -1,19 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Newtonsoft.Json;
 
 namespace day18
 {
@@ -22,17 +10,23 @@ namespace day18
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<Hotel> CurrentHotels
-        {
-            get; set;
-        }
+        public List<Hotel> CurrentHotels { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
-            var client = new WebClient();
-            var response = client.DownloadString("http://127.0.0.1:63450/api/hotels");
-            CurrentHotels = JsonConvert.DeserializeObject<List<Hotel>>(response);
+
+            // Инициализация данных напрямую в коде
+            CurrentHotels = new List<Hotel>
+            {
+                new Hotel { id = 1, Name = "Grand Hotel", GameOfStars = 5, CountryName = "France", HotelImage = "image1.jpg" },
+                new Hotel { id = 2, Name = "Seaside Resort", GameOfStars = 4, CountryName = "Spain", HotelImage = "image2.jpg" },
+                new Hotel { id = 3, Name = "Mountain View", GameOfStars = 3, CountryName = "Switzerland", HotelImage = "image3.jpg" }
+            };
+
             DataContext = this;
         }
     }
+
+
 }
