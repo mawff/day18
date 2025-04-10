@@ -14,7 +14,7 @@ namespace day18
 
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();//s
 
             // Инициализация данных напрямую в коде
             CurrentHotels = new List<Hotel>
