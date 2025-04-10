@@ -19,11 +19,9 @@ namespace day18
             // Инициализация данных напрямую в коде
             CurrentHotels = new List<Hotel>
             {
-                new Hotel { id = 1, Name = "Grimstroke", GameOfStars = 5, CountryName = "France", HotelImage = "image1.jpg" },
-                new Hotel { id = 2, Name = "Pudge", GameOfStars = 4, CountryName = "Spain", HotelImage = "image2.jpg" },
-                  new Hotel { id = 1, Name = "Shadow Fiend", GameOfStars = 5, CountryName = "France", HotelImage = "image1.jpg" },
-                new Hotel { id = 2, Name = "Drow Ranger", GameOfStars = 4, CountryName = "Spain", HotelImage = "image2.jpg" },
-                new Hotel { id = 3, Name = "Invoker", GameOfStars = 3, CountryName = "Switzerland", HotelImage = "image3.jpg" }
+                new Hotel { id = 1, Name = "Grand Hotel", GameOfStars = 5, CountryName = "France", HotelImage = "image1.jpg" },
+                new Hotel { id = 2, Name = "Seaside Resort", GameOfStars = 4, CountryName = "Spain", HotelImage = "image2.jpg" },
+                new Hotel { id = 3, Name = "Mountain View", GameOfStars = 3, CountryName = "Switzerland", HotelImage = "image3.jpg" }
             };
 
             DataContext = this;
